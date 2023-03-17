@@ -1,2 +1,1 @@
-project
-0x01. C - Variables, if, else, while
+A README.md file, at the root of the folder of the project
