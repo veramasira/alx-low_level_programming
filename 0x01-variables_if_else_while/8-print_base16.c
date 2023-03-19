@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints all single digit numbers of base 16in lowercase.
+ * main - Prints all single digit numbers of base 16 in lowercase.
  *
  * Return: Always 0.
  */
@@ -20,3 +20,4 @@ init main(void)
 
 	return (0);
 }
+
