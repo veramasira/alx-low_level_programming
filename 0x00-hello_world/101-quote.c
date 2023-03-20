@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /*
- * main - A c file to display a string to the standard err.
+ * main - Prints out the last part of a quote in the standard error.
  * Return: Always 0 (Success)
  */
 int main(void)
