@@ -1,16 +1,14 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- *  * _abs - func is to check if c is a letter, lowercase or uppercase
- *   * @c: is the argument that will be used
- *    * Return: 0
- *     */
-int _abs(int c)
+ * _abs - computes the absolute value of an integer
+ * @t: The integer to be computed
+ * Return: The absolute value
+ */
+int _abs(int t)
 {
-	if (c < 0 || c == 0)
-	{
-		return (c);
-	}
+	if (t >= 0)
+		return (t);
 	else
-		return (c * -1);
-} 
+		return (-t);
+}
