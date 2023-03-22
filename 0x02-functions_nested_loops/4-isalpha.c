@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isaplha - func is to check if c is a letter, lowercase or uppercase
+ *test_isaplha - func is to check if c is a letter, lowercase or uppercase
  * @c: is the argument that will be used
  * Return: 0
  */
