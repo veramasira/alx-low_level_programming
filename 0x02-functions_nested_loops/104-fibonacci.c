@@ -1,37 +1,32 @@
 #include <stdio.h>
 /**
- *  * main - prints the first 90 fibonacci numbers starting by 1 and 2, separated by a comma followed by space
- *   * Return: always 0
- *    */
+ * main - main function
+ *
+ * Return: nothing
+ */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum ;
-	unsigned long fib1_half1, fib2_half2, fib2_half1, fib3_half2;
+	int counter = 2;
 
-	for (count = 0; count < 90; count++)
+	float a = 1;
+	float b = a + 1;
+	float c = a + b;
+
+	print("%.0f, ", a);
+	printf("%.0f, ", b);
+	while (counter < 98)
 	{
-		sum = fib1 + fib2;
-		printf("%lu, ", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-	}
-	fib1_half1 = fib1 / 10000000000;
-	fib2_half1 = fib2 / 10000000000;
-	fib1_half2 = fib1 % 10000000000;
-	fib2_half2 = fib2 % 10000000000;
-
-	for(count = 93; count < 99; count++)
-	{
-		half1 = fib1_half1 + fib2_half1;
-		half2 = fib1_half2 + fib2_half2;
-
-		if(fib1_half2 + fib2_half2 < 9999999999)
+		counter++;
+		printf("%.0f", c);
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 98)
 		{
-			half1 += 1;
-			half2 %= 10000000000;
+			printf(", ");
 		}
-		printf("%lu%lu", half1, half2);
 	}
+	printf("\n");
+	return (0);
 }
+
