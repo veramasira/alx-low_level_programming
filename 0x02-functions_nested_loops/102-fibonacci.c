@@ -1,25 +1,29 @@
 #include <stdio.h>
 /**
- *main - pritns frist 50 fibonacci numbers, starting with 1 and 2 separated by a comma followed by space
- *Return: Always 0
+ * main - main function
+ *
+ * Return: nothing
  */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+	int counter = 2;
+	long int a = 1;
+	long int b = a + 1;
+	long int c = a + b;
 
-	for (count = 0; count < 50; count++)
+	printf("%ld, %ld, ", a, b);
+	while (counter < 50)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum)';
-
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			        printf('\n');
-		else
-			        printf(", ");
+		printf("%ld", c);
+		counter++;
+		a = b;
+		b = c;
+		c = a + b;
+		if (counter < 50)
+		{
+			printf(", ");
+		}
 	}
+	printf("\n");
 	return (0);
-} 
+}
