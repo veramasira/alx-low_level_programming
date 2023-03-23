@@ -1,26 +1,26 @@
 #include <stdio.h>
 /**
- *main - prints the sum of even-valued  numbered fibonnaci sequence terms not exceeding 4000000
- *Return: always 0
+ * main - main function
+ *
+ * Return: nothing
  */
 int main(void)
 {
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	float tot_sum;
+	int counter = 0;
+	long int a = 1;
+	long int b = a;
+	long int c = a + b;
 
-	while (1)
+	while (c < 4000000)
 	{
-		fibsum = fib1 + fib2;
-
-		if (fibsum > 4000000)
-			break;
-
-		if ((fibsum % 2) == 0)
-			        tot_sum += fibsum;
-
-		fib1 = fib2;
-		fib2 = fibsum;
+		if (c % 2 == 0)
+		{
+			counter += c;
+		}
+		a = b;
+		b = c;
+		c = a + b;
 	}
-	printf("%.0f\n", tot_sum);
-	return (0); 
+	printf("%d\n", counter);
+	return (0);
 }
