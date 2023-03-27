@@ -1,1 +1,1 @@
-# 0x02-functions_nested_loops
+A README.md file, at the root of the folder of the project is mandatory
