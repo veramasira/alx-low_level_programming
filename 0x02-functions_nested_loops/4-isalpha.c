@@ -1,15 +1,20 @@
 #include "main.h"
+
 /**
- *_isaplha - checks for alphabets
- * @c: character to be checked
+ * _isalpha - main function
  *
- * Return: 1 if character is a letter, 0 otherwise
+ * @c: character to compare
+ *
+ * Return: 1 if true, else 0
+ *
  */
-int _isaplha(int c)
+
+int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
 		return (1);
-	else
-		return (0);
+	}
+	return (0);
 }
 
