@@ -1,7 +1,8 @@
+#include <stddef.h>
 #include "function_pointers.h"
 #include <stdio.h>
 /**
- * array_iterator - prints each array elem on a new1
+ * array_iterator - prints each array elem on a new one
  * @array: array
  * @size: how many elem to print
  * @action: pointer to print in regular or hex
