@@ -3,8 +3,8 @@
 /**
  * array_iterator - prints each array elem on a new1
  * @array: array
- * @size: size of array
- * @action: pointer to print
+ * @size: how many elem to print
+ * @action: pointer to print in regular or hex
  * Return: void
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
