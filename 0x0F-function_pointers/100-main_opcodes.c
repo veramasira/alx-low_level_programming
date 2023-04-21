@@ -1,10 +1,10 @@
 #include "function_pointers.h"
 /**
- * main - prints its own opcodes
+ * main - prints the opcodes of its own main function
  * @argc: number of arguments
  * @argv: array of arguments
  *
- * Return: Always 0 (success)
+ * Return: usually 0 (success)
  */
 int main(int argc, char *argv[])
 {
