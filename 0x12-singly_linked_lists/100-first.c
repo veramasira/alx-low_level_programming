@@ -2,13 +2,21 @@
 #include "lists.h"
 
 /**
- * print_before_main - Prints a string before the main function is executed
+ * first - proto
  *
- * Return: Nothing
+ * Description: it applys the construction attribute to the first
+ * so that its executable before main()
  */
 
-void print_before_main(void)
+void first(void) __attribute__ ((constructor));
+
+/**
+ * first - entry point
+ *
+ * Description: prints a sentence before the main function is executed
+ */
+void first(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house");
-	printf(" upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
