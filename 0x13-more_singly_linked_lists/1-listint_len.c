@@ -3,19 +3,19 @@
 /**
  * list_len - returns the number of elements in a linked list_t list
  * @h: head of linked list
- * Return: number of elements
+ *
+ * Return: The number of nodes in the list.
  */
 
 size_t list_len(const list_t *h)
 {
-	size_t nodes;
-
-	nodes = 0;
-	while (h != NULL)
+	size_t num;
+i
+	while (h)
 	{
-		nodes++;
+		num++;
 		h = h->next;
 	}
 
-	return (nodes);
+	return (num);
 }
