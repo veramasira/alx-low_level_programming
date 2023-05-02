@@ -3,18 +3,20 @@
 /**
  * free_list - frees a list_t list
  * @head: head of a linked list
- * Return: void
+ * Description: the func realease the memory allocated for a list:
+ * it frees the memory
  */
 
 void free_list(list_t *head)
 {
-	list_t *temp;
-
-	while (head != NULL)
+	if (head)
 	{
-		temp = head->next;
-		free(head->str);
+		free_list(head->next);
+
+		if (head->str)
+		{
+			free(head->str);
+		}
 		free(head);
-		head = temp;
 	}
 }
