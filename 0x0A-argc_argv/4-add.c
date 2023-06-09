@@ -1,57 +1,62 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define UNUSED(x) (void)(x)
-/**
- * StringCheck - checks string
- * @s: string to check
- * Return: boolean
- */
-int StringCheck(char *s)
-{
-	int i = 0;
+#include <string.h>
 
-	for (; s[i] != '\0'; i++)
+/**
+ * check_num - checks if a string contains only digits
+ * @str: string to be checked
+ *
+ * Return: 1 if the string contains only digits, 0 otherwise
+ */
+int check_num(char *str)
+{
+	unsigned int count;
+
+	count = 0;
+	while (count < strlen(str))
 	{
-		if (!isdigit(s[i]))
+		if (!isdigit(str[count]))
 		{
 			return (0);
 		}
+
+		count++;
 	}
 	return (1);
 }
-/**
- * main - prints the name of the program
- * @argc: count arguments
- * @argv: arguments
- * Return: always 0
- */
-int main(int argc, char  *argv[])
-{
-	int i;
-	int result = 0;
 
-	if (argc > 1)
+/**
+ * main - prints the sum of integers passed as command line arguments
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0 on success, 1 on error
+ */
+int main(int argc, char *argv[])
+{
+	int count;
+	int str_to_int;
+	int sum = 0;
+
+	count = 1;
+	while (count < argc)
 	{
-		for (i = 1; i < argc; i++)
+		if (check_num(argv[count]))
 		{
-			if (StringCheck(argv[i]))
-			{
-				result += atoi(argv[i]);
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
+			str_to_int = atoi(argv[count]);
+			sum += str_to_int;
 		}
-		printf("%d\n", result);
-		return (0);
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+
+		count++;
 	}
-	else
-	{
-		printf("%d\n", 0);
-		return (1);
-	}
+
+	printf("%d\n", sum);
+
+	return (0);
 }
