@@ -1,4 +1,6 @@
-#include "function_pointers.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * main - prints the opcodes of its own main function
  * @argc: number of arguments
@@ -17,7 +19,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	int bytes = atoi(argv[i]);
+	int bytes = atoi(argv[1])i;
 
 	if (bytes < 0)
 	{
